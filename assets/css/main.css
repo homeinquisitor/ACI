@@ -172,14 +172,8 @@ input, select, textarea {
 
 /* Container */
 
-	.contain {
-		margin:  auto;
-		max-width: 100%;
-	    width: 68em;
-		height: 10em;
-	}
 	.container {
-		margin:  auto;
+		margin: 0 auto;
 		max-width: 100%;
 		width: 90em;
 	}
@@ -195,7 +189,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			.container {
-				width: calc(50% - 50px);
+				width: 100em;
 			}
 
 		}
@@ -1681,7 +1675,7 @@ input, select, textarea {
 		input[type="reset"].style1,
 		button.style1,
 		.button.style1 {
-			background: #013c40 url("images/overlay.png");
+			background: #013c40 url("images/overlay.png"); /*main color for website*/
 			color: #fff;
 		}
 
