@@ -1,7 +1,11 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900");
 
-
+/*
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -172,16 +176,10 @@ input, select, textarea {
 
 /* Container */
 
-	.contain {
-		margin:  auto;
-		max-width: 100%;
-	    width: 68em;
-		height: 10em;
-	}
 	.container {
-		margin:  auto;
+		margin: 0 auto;
 		max-width: 100%;
-		width: 90em;
+		width: 68em;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -195,7 +193,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			.container {
-				width: calc(50% - 50px);
+				width: calc(100% - 100px);
 			}
 
 		}
@@ -956,7 +954,6 @@ input, select, textarea {
 				flex-wrap: wrap;
 				box-sizing: border-box;
 				align-items: stretch;
-			
 			}
 
 				.row > * {
@@ -1085,7 +1082,6 @@ input, select, textarea {
 
 				.row > .col-12-medium {
 					width: 100%;
-					
 				}
 
 				.row > .off-12-medium {
@@ -1445,7 +1441,7 @@ input, select, textarea {
 
 	section,
 	article {
-		margin: 0 0 0em 0;
+		margin: 0 0 4em 0;
 	}
 
 	section > :last-child,
@@ -1457,23 +1453,23 @@ input, select, textarea {
 
 	header.style1 {
 		text-align: center;
-		padding: 0em 0 0em 0;
+		padding: 3em 0 3em 0;
 	}
 
 		header.style1 h2 {
 			font-weight: 700;
 			font-size: 2em;
-			letter-spacing: 0.045em;
-			line-height: 0em;
+			letter-spacing: 0.075em;
+			line-height: 1.5em;
 		}
 
 		header.style1 p {
 			color: #b1b4b9;
 			display: block;
-			margin: 1em 0 0 0;
-			font-size: 1em;
+			margin: 1.15em 0 0 0;
+			font-size: 1.3em;
 			letter-spacing: 0.075em;
-			line-height: 1.0em;
+			line-height: 1.5em;
 		}
 
 /* Table */
@@ -1621,11 +1617,6 @@ input, select, textarea {
 
 		.image.featured {
 			display: block;
-			width: 40%;
-			margin: 0 0 2em 0;
-		}
-		.image.feature {
-			display: block;
 			width: 100%;
 			margin: 0 0 2em 0;
 		}
@@ -1655,8 +1646,8 @@ input, select, textarea {
 		padding: 0 2.25em 0 2.25em;
 		font-size: 0.9em;
 		min-width: 12em;
-		height: 2em;
-		line-height: 2em;
+		height: 4em;
+		line-height: 4em;
 	}
 
 		input[type="button"]:hover,
@@ -1664,7 +1655,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #03260d; !important;
+			background-color: #f98780;
 		}
 
 		input[type="button"].large,
@@ -1681,7 +1672,7 @@ input, select, textarea {
 		input[type="reset"].style1,
 		button.style1,
 		.button.style1 {
-			background: #013c40 url("images/overlay.png");
+			background: #e97770 url("images/overlay.png");
 			color: #fff;
 		}
 
@@ -1690,7 +1681,7 @@ input, select, textarea {
 			input[type="reset"].style1:hover,
 			button.style1:hover,
 			.button.style1:hover {
-				background-color: #03260d;
+				background-color: #f98780;
 			}
 
 			input[type="button"].style1:active,
@@ -1859,7 +1850,7 @@ input, select, textarea {
 		}
 
 		.feature-list h3 {
-			color: #ad9900 !important; /* color for listed headings*/
+			color: #e97770 !important;
 			margin: -0.35em 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
@@ -1952,13 +1943,12 @@ input, select, textarea {
 
 	.box.post-excerpt .image.left {
 		position: relative;
-		top: 0.1em;
-		width: 2em;
+		top: 0.5em;
+		width: 5em;
 	}
 
 	.box.post-excerpt h3, .box.post-excerpt p {
-		margin-left: 6em;
-		font-size: 0.9em;
+		margin-left: 7em;
 	}
 
 /* Wrapper */
@@ -2012,13 +2002,13 @@ input, select, textarea {
 			}
 
 		.wrapper.style1 {
-			background: #013c40 url("images/overlay.png");
+			background: #e97770 url("images/overlay.png");
 			color: #eee;
 			color: rgba(255, 255, 255, 0.75);
 		}
 
 			.wrapper.style1 .title {
-				background: #013c40 url("images/overlay.png"); /*background color*/
+				background: #e97770 url("images/overlay.png");
 				color: #fff;
 			}
 
@@ -2047,7 +2037,6 @@ input, select, textarea {
 			.wrapper.style3 .image {
 				border: solid 10px #fff;
 			}
-		
 
 /* Page Wrapper */
 
@@ -2071,7 +2060,7 @@ input, select, textarea {
 		-ms-justify-content: center;
 		justify-content: center;
 		position: relative;
-		height: 16em;
+		height: 24em;
 		background: url("../../images/banner.jpg") center center;
 		background-size: cover;
 		padding: 0;
@@ -2098,7 +2087,6 @@ input, select, textarea {
 		text-align: center;
 		position: relative;
 		top: 1.5em;
-		padding-right: 43;
 	}
 
 		#logo h1 {
@@ -2118,8 +2106,6 @@ input, select, textarea {
 			letter-spacing: 0.2em;
 			font-size: 0.9em;
 		}
-	
-
 
 /* Nav */
 
@@ -2226,10 +2212,8 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		padding-top: 1em;
-		padding-bottom: 20em;
+		padding-bottom: 8em;
 		text-align: center;
-		font-size: 14px; /* Reduce overall font size */
 	}
 
 		#intro p.style1 {
@@ -2238,14 +2222,14 @@ input, select, textarea {
 		}
 
 		#intro p.style2 {
-			font-weight: 800;
+			font-weight: 700;
 			color: #fff;
-			border-radius: 0em;
+			border-radius: 0.35em;
 			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
-			font-size: 1.75em;
+			font-size: 2.75em;
 			letter-spacing: 0.075em;
-			line-height: 1em;
-			padding: 0.9em 0 0.5em 0;
+			line-height: 1.35em;
+			padding: 1em 0 1em 0;
 			margin-bottom: 1em;
 		}
 
@@ -2277,7 +2261,7 @@ input, select, textarea {
 	}
 
 		#highlights .highlight h3 {
-			color: #013c40;
+			color: #e97770;
 			margin: 0 0 0.75em 0;
 			font-size: 1.15em;
 			letter-spacing: 0.05em;
@@ -2291,7 +2275,7 @@ input, select, textarea {
 		background: #282b34 url("images/overlay.png");
 		color: #eee;
 		color: rgba(255, 255, 255, 0.5);
-		padding: 2em 0; /* Top and bottom padding reduced */
+		padding-bottom: 6em;
 	}
 
 		#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b, #footer a {
@@ -2360,8 +2344,8 @@ input, select, textarea {
 		}
 
 		#footer header.style1 {
-			padding-bottom: 0.9em;
-			margin-bottom: 0.9em;
+			padding-bottom: 6em;
+			margin-bottom: 6em;
 			border-bottom: solid 1px rgba(255, 255, 255, 0.05);
 		}
 
@@ -2389,8 +2373,8 @@ input, select, textarea {
 
 	#copyright {
 		text-align: center;
-		padding-top: 1em;
-		margin-top: 1em;
+		padding-top: 6em;
+		margin-top: 6em;
 		border-top: solid 1px rgba(255, 255, 255, 0.05);
 	}
 
@@ -2446,7 +2430,7 @@ input, select, textarea {
 
 			body, input, select, textarea {
 				font-size: 11pt;
-				line-height: 1em;
+				line-height: 1.5em;
 				letter-spacing: 0.015em;
 			}
 
@@ -2487,8 +2471,8 @@ input, select, textarea {
 			}
 
 				#footer header.style1 {
-					padding-bottom: 1em;
-					margin-bottom: 1em;
+					padding-bottom: 4em;
+					margin-bottom: 4em;
 					border-bottom: solid 1px rgba(255, 255, 255, 0.05);
 				}
 
@@ -2851,14 +2835,6 @@ input, select, textarea {
 			}
 
 		/* Box */
-		  .sidebar {
-			  left: 0px;
-			  height: 600px;      /* Set height of the div */
-            position: absolute; /* Allows free movement */
-            top: 0px;         /* Distance from the top */
-            right: 0.1px;        /* Distance from the left */
-            overflow: hidden;
-		  }
 
 			.box.post-excerpt .image.left {
 				position: relative;
