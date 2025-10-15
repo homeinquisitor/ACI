@@ -169,7 +169,11 @@ input, select, textarea {
 	p, ul, ol, dl, table, blockquote, form {
 		margin-bottom: 2em;
 	}
-
+/*paragraph */
+     p.big {
+     line-height: 2;
+	 font-size: ;
+      }
 /* Container */
 
 	.container {
