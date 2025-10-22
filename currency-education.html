@@ -6,6 +6,158 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Progress Bar Styles */
+        .progress-container {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 8px;
+            margin: 1.5em 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar {
+            height: 100%;
+            background: #013c40;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 1.5s ease-in-out;
+            position: relative;
+        }
+        .progress-bar:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: linear-gradient(
+                -45deg, 
+                rgba(255,255,255,0.2) 25%, 
+                transparent 25%, 
+                transparent 50%, 
+                rgba(255,255,255,0.2) 50%, 
+                rgba(255,255,255,0.2) 75%, 
+                transparent 75%, 
+                transparent
+            );
+            background-size: 50px 50px;
+            animation: move 2s linear infinite;
+            border-radius: 10px;
+        }
+        @keyframes move {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+        
+        /* Interactive Elements */
+        .interactive-box {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .interactive-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5em;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            margin: 1em 0;
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #013c40;
+            margin: 0.5em 0;
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(1, 60, 64, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(1, 60, 64, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(1, 60, 64, 0); }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #013c40;
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #013c40; }
+        }
+        
+        .devaluation-meter {
+            height: 20px;
+            background: #e9ecef;
+            border-radius: 10px;
+            margin: 0.5em 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .devaluation-level {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease;
+            position: relative;
+        }
+        .devaluation-level:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: linear-gradient(
+                -45deg, 
+                rgba(255,255,255,0.3) 25%, 
+                transparent 25%, 
+                transparent 50%, 
+                rgba(255,255,255,0.3) 50%, 
+                rgba(255,255,255,0.3) 75%, 
+                transparent 75%, 
+                transparent
+            );
+            background-size: 20px 20px;
+            animation: move 2s linear infinite;
+            border-radius: 10px;
+        }
+        
+        .table-row {
+            transition: all 0.3s ease;
+        }
+        .table-row:hover {
+            background: #f8f9fa;
+            transform: scale(1.01);
+        }
+    </style>
 </head>
 <body class="is-preload">
     <div id="page-wrapper">
@@ -14,7 +166,7 @@
         <section id="header" class="wrapper">
             <!-- Logo -->
             <div id="logo">
-                <h1><a href="index.html">Digital Currency Education</a></h1>
+                <h1><a href="index.html" class="typewriter">Digital Currency Education</a></h1>
                 <p>Understanding Decentralization & Financial Sovereignty</p>
             </div>
 
@@ -22,11 +174,11 @@
             <nav id="nav">
                 <ul>
                     <li class="current"><a href="index.html">Home</a></li>
-								<li class="current"><a href="getstarted.html">Get Started</a></li>
-								<li class="current"><a href="currency-education.html">Currency Education</a></li>
-								<li class="current"><a href="cryptoasset.html">Crypto Assets</a></li>
-								<li class="current"><a href="wallets-guide.html">Wallets Guide</a></li>
-								<li class="current"><a href="aboutus.html">About Us</a></li>
+                    <li class="current"><a href="getstarted.html">Get Started</a></li>
+                    <li class="current"><a href="currency-education.html">Currency Education</a></li>
+                    <li class="current"><a href="cryptoasset.html">Crypto Assets</a></li>
+                    <li class="current"><a href="wallets-guide.html">Wallets Guide</a></li>
+                    <li class="current"><a href="aboutus.html">About Us</a></li>
                 </ul>
             </nav>
         </section>
@@ -38,26 +190,53 @@
                     <div class="col-12 col-12-medium">
                         <!-- Content -->
                         <div id="content">
-                            <article class="box post">
+                            <article class="box post interactive-box">
                                 <header class="style1">
-                                    <h2>The Digital Currency Revolution</h2>
-                                    <p>Why decentralized currencies represent the future of money</p>
+                                    <h2>WHY DECENTRALIZED CURRENCIES REPRESENT THE FUTURE OF MONEY</h2>
+                                    
                                 </header>
                                 <p>In an era of unprecedented monetary expansion and technological transformation, 
                                 understanding the shift toward decentralized digital currencies has never been more critical.
                                 The combination of AI-powered financial surveillance and mandatory digital identity systems 
-                                creates a perfect storm for unprecedented financial control unless we embrace decentralized alternatives.</p><br />
+                                creates a perfect storm for unprecedented financial control unless we embrace decentralized alternatives.</p>
+                                
+                                <div class="row" style="margin-top: 2em;">
+                                    <div class="col-4 col-12-small">
+                                        <div class="stat-card floating">
+                                            <div class="stat-number" id="stat1">96%</div>
+                                            <p>US Dollar devaluation since 1913</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-12-small">
+                                        <div class="stat-card floating" style="animation-delay: 0.5s;">
+                                            <div class="stat-number" id="stat2">27</div>
+                                            <p>Average fiat currency lifespan (years)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-12-small">
+                                        <div class="stat-card floating" style="animation-delay: 1s;">
+                                            <div class="stat-number" id="stat3">21M</div>
+                                            <p>Bitcoin maximum supply limit</p>
+                                        </div>
+                                    </div>
+                                </div><br />
                             </article>
                             
                             <div class="row gtr-150" id="decentralization">
                                 <div class="col-6 col-12-small">
-                                    <section class="box">
+                                    <section>
                                         <header>
-                                            <h2>Financial Sovereignty</h2>
+                                            <h2>FINANCIAL SOVEREIGNTY PROGRESS</h2>
                                         </header>
                                         <a href="#" class="image featured"><img src="images/financial-sovereignty.jpg" alt="Financial Sovereignty" /></a>
                                         <p>Decentralized currencies give individuals full control over their assets without reliance on intermediaries. 
                                         No entity can freeze accounts or prevent transactions based on political views or geography.</p>
+                                        
+                                        <h4>Key Benefits:</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar" id="sovereignty-progress"></div>
+                                        </div>
+                                        
                                         <ul>
                                             <li><strong>Borderless Transactions:</strong> Send value anywhere without costly conversion fees</li>
                                             <li><strong>Censorship Resistance:</strong> No entity can prevent transactions</li>
@@ -66,52 +245,68 @@
                                     </section>
                                 </div>
                                 <div class="col-6 col-12-small">
-                                    <section class="box">
+                                    <section>
                                         <header>
-                                            <h2>Inflation Protection</h2>
+                                            <h2>INFLATION PROTECTION</h2>
                                         </header>
                                         <a href="#" class="image featured"><img src="images/inflation-protection.jpg" alt="Inflation Protection" /></a>
                                         <p>Fixed supply cryptocurrencies protect against the devaluation caused by excessive money printing. 
                                         While central banks create unlimited currency, Bitcoin's 21 million cap preserves value.</p>
+                                        
+                                        <h4>Protection Level:</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar" id="inflation-progress"></div>
+                                        </div>
+                                        
                                         <ul>
                                             <li><strong>Predictable Supply:</strong> Known issuance schedules prevent surprises</li>
                                             <li><strong>Store of Value:</strong> Digital gold with verifiable scarcity</li>
                                             <li><strong>Hedge Against Devaluation:</strong> Protection from currency debasement</li>
                                         </ul>
-                                    </section> <br />
+                                    </section>
                                 </div>
-                            </div>
+                            </div><br />
                             
                             <div class="row gtr-150" id="history">
                                 <div class="col-6 col-12-small">
-                                    <section class="box">
+                                    <section >
                                         <header>
-                                            <h2>Historical Devaluation</h2>
+                                            <h2>HISTORICAL DEVALUATION</h2>
                                         </header>
                                         <a href="#" class="image featured"><img src="images/historical-currency.jpg" alt="Historical Currency" /></a>
                                         <p>Throughout history, virtually every fiat currency has eventually collapsed due to overprinting and loss of public confidence. 
                                         The average lifespan of a fiat currency is approximately 27 years.</p>
                                         <p>The US dollar has lost over 96% of its purchasing power since the Federal Reserve was established in 1913. 
                                         What cost $100 in 1913 now costs over $2,700.</p>
+                                        
+                                        <h4>Devaluation Risk:</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar" id="devaluation-progress"></div>
+                                        </div> 
                                     </section>
                                 </div>
                                 <div class="col-6 col-12-small">
-                                    <section class="box">
+                                    <section >
                                         <header>
-                                            <h2>The Printing Press Problem</h2>
+                                            <h2>THE PRINTING PRESS PROBLEM</h2>
                                         </header>
                                         <a href="#" class="image featured"><img src="images/money-printing.jpg" alt="Money Printing" /></a>
                                         <p>Central banks can create unlimited amounts of currency, diluting the value of every unit in circulation. 
                                         Since 2020, major economies have printed unprecedented amounts of money.</p>
                                         <p>This "quantitative easing" directly transfers wealth from savers to debtors and governments, 
                                         creating artificial booms followed by inevitable busts.</p>
+                                        
+                                        <h4>Money Printing Impact:</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar" id="printing-progress"></div>
+                                        </div>
                                     </section>
                                 </div>
                             </div>
                             
                             <div class="row gtr-150">
                                 <div class="col-12">
-                                    <section class="box">
+                                    <section class="box interactive-box">
                                         <header>
                                             <h2>Currency Devaluation Timeline</h2>
                                         </header>
@@ -122,71 +317,101 @@
                                                         <th>Currency</th>
                                                         <th>Time Period</th>
                                                         <th>Devaluation</th>
+                                                        <th>Devaluation Meter</th>
                                                         <th>Primary Cause</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
+                                                    <tr class="table-row">
                                                         <td>Roman Denarius</td>
                                                         <td>1st-3rd Century AD</td>
                                                         <td>~99.9%</td>
+                                                        <td>
+                                                            <div class="devaluation-meter">
+                                                                <div class="devaluation-level" style="width: 99.9%; background: #dc3545;"></div>
+                                                            </div>
+                                                        </td>
                                                         <td>Silver content reduced from 95% to 0.02%</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>Weimar Mark</td>
-                                                        <td>1921-1923</td>
-                                                        <td>Effectively 100%</td>
-                                                        <td>Money printing to pay war reparations</td>
-                                                    </tr>
-                                                    <tr>
+                                                    
+                                                    <tr class="table-row">
                                                         <td>Zimbabwe Dollar</td>
                                                         <td>2007-2009</td>
                                                         <td>Effectively 100%</td>
+                                                        <td>
+                                                            <div class="devaluation-meter">
+                                                                <div class="devaluation-level" style="width: 100%; background: #dc3545;"></div>
+                                                            </div>
+                                                        </td>
                                                         <td>Hyperinflation from excessive money printing</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>Venezuelan Bolívar</td>
-                                                        <td>2016-Present</td>
-                                                        <td>>99.9%</td>
-                                                        <td>Money printing to fund government spending</td>
-                                                    </tr>
-													<tr>
+                                                    
+                                                    <tr class="table-row">
                                                         <td>Cameroon CFA Franc</td>
                                                         <td>1945-Present</td>
                                                         <td>Varies</td>
+                                                        <td>
+                                                            <div class="devaluation-meter">
+                                                                <div class="devaluation-level" style="width: 40%; background: #ffc107;"></div>
+                                                            </div>
+                                                        </td>
                                                         <td>Regional currency tied to Euro</td>
                                                     </tr>
-													<tr>
-    <td>Nigerian Naira</td>
-    <td>1973-Present</td>
-    <td>Varies</td>
-    <td>Oil dependency and economic policies</td>
-</tr>
-<tr>
-    <td>Euro</td>
-    <td>1999-Present</td>
-    <td>~2%</td>
-    <td>European Central Bank monetary policy</td>
-</tr>
-<tr>
-    <td>British Pound</td>
-    <td>~800-Present</td>
-    <td>~2%</td>
-    <td>Bank of England inflation targeting</td>
-</tr>
-<tr>
-    <td>Ghanaian Cedi</td>
-    <td>1965-Present</td>
-    <td>Varies</td>
-    <td>Fiscal deficits and economic management</td>
-</tr>
-                                                    <tr>
+                                                    <tr class="table-row">
+                                                        <td>Nigerian Naira</td>
+                                                        <td>1973-Present</td>
+                                                        <td>Varies</td>
+                                                        <td>
+                                                            <div class="devaluation-meter">
+                                                                <div class="devaluation-level" style="width: 70%; background: #fd7e14;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Oil dependency and economic policies</td>
+                                                    </tr>
+                                                    <tr class="table-row">
+                                                        <td>Euro</td>
+                                                        <td>1999-Present</td>
+                                                        <td>~2%</td>
+                                                        <td>
+                                                            <div class="devaluation-meter">
+                                                                <div class="devaluation-level" style="width: 2%; background: #28a745;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>European Central Bank monetary policy</td>
+                                                    </tr>
+                                                    <tr class="table-row">
+                                                        <td>British Pound</td>
+                                                        <td>~800-Present</td>
+                                                        <td>~2%</td>
+                                                        <td>
+                                                            <div class="devaluation-meter">
+                                                                <div class="devaluation-level" style="width: 2%; background: #28a745;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Bank of England inflation targeting</td>
+                                                    </tr>
+                                                    <tr class="table-row">
+                                                        <td>Ghanaian Cedi</td>
+                                                        <td>1965-Present</td>
+                                                        <td>Varies</td>
+                                                        <td>
+                                                            <div class="devaluation-meter">
+                                                                <div class="devaluation-level" style="width: 60%; background: #fd7e14;"></div>
+                                                            </div>
+                                                        </td>
+                                                        <td>Fiscal deficits and economic management</td>
+                                                    </tr>
+                                                    <tr class="table-row">
                                                         <td>US Dollar</td>
                                                         <td>1913-Present</td>
                                                         <td>96%</td>
+                                                        <td>
+                                                            <div class="devaluation-meter">
+                                                                <div class="devaluation-level" style="width: 96%; background: #dc3545;"></div>
+                                                            </div>
+                                                        </td>
                                                         <td>Federal Reserve money creation</td>
                                                     </tr>
-													
                                                 </tbody>
                                             </table>
                                         </div>
@@ -196,13 +421,19 @@
                             
                             <div class="row gtr-150" id="ai">
                                 <div class="col-6 col-12-small">
-                                    <section class="box">
+                                    <section class="box interactive-box">
                                         <header>
                                             <h2>AI's Impact on Financial Systems</h2>
                                         </header>
                                         <a href="#" class="image featured"><img src="images/ai-finance.jpg" alt="AI Finance" /></a>
                                         <p>Artificial Intelligence presents both opportunities and threats to financial sovereignty. 
                                         AI-powered surveillance systems can monitor and control financial transactions with unprecedented precision.</p>
+                                        
+                                        <h4>AI Control Risk:</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar" id="ai-progress"></div>
+                                        </div>
+                                        
                                         <ul>
                                             <li><strong>Centralized Control:</strong> AI systems could deny financial services based on predictive behavior analysis</li>
                                             <li><strong>Algorithmic Discrimination:</strong> Automated systems making financial exclusion decisions</li>
@@ -212,13 +443,19 @@
                                     </section>
                                 </div>
                                 <div class="col-6 col-12-small" id="digitalid">
-                                    <section class="box">
+                                    <section class="box interactive-box">
                                         <header>
                                             <h2>The Danger of Mandatory Digital ID</h2>
                                         </header>
                                         <a href="#" class="image featured"><img src="images/digital-id.jpg" alt="Digital ID" /></a>
                                         <p>Digital identity systems represent one of the greatest threats to financial privacy. 
                                         Central Bank Digital Currencies (CBDCs) could be programmed with expiration dates or usage restrictions.</p>
+                                        
+                                        <h4>Privacy Risk Level:</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar" id="privacy-progress"></div>
+                                        </div>
+                                        
                                         <ul>
                                             <li><strong>Programmable Money:</strong> CBDCs with social compliance requirements</li>
                                             <li><strong>Social Credit Integration:</strong> Financial access tied to behavior scores</li>
@@ -226,22 +463,26 @@
                                             <li><strong>Weaponized Exclusion:</strong> Instant cutoff from financial systems for dissent</li>
                                         </ul>
                                     </section>
-                                </div>
-                            </div>
+                                </div><br />
+                            </div> <br />
                             
                             <div class="row gtr-150">
-                                <div class="col-12">
-								<br />
-								<br />
-                                    <section class="box">
+                                <div class="col-12"><br />
+                                    <section >
                                         <header class="style1">
                                             <h2>Take Control of Your Financial Future</h2>
-                                            <p>Education is the first step toward financial sovereignty</p>
+                                            <p>Education is the first step toward financial sovereignty</p><br />
                                         </header>
                                         <p>The combination of AI-powered financial surveillance and mandatory digital identity systems 
-                                        creates a perfect storm for unprecedented financial control unless we embrace decentralized alternatives.</p>
+                                        creates a perfect storm for unprecedented financial control unless we embrace decentralized alternatives.
+										Decentralized cryptocurrencies offer an escape from this system - providing financial privacy, sovereignty,
+										and protection from the inevitable devaluation of government-issued currencies, including those like the 
+										Central African CFA franc used in Cameroon, which is tied to the Euro and thus subject to monetary policies made abroad.</p>
                                         <p>Decentralized cryptocurrencies offer an escape from this system - providing financial privacy, 
                                         sovereignty, and protection from the inevitable devaluation of government-issued currencies.</p>
+                                        
+                                        
+                                        
                                         <ul class="actions special">
                                             <li><a href="cryptoasset.html" class="button style1">Explore Crypto Assets</a></li>
                                             <li><a href="getstarted.html" class="button style2">Begin Your Journey</a></li>
@@ -324,11 +565,13 @@
                                     <section>
                                         <h3 class="icon solid fa-phone">Phone/WhatsApp</h3>
                                         <p>
-                                            <a href="tel:+237670242146">+48 515524790</a>
+                                            <a href="tel:+237670242146">+237 670 242 146</a>
                                         </p>
                                     </section>
                                 </div>
-                            </div>
+                            </div><br /><br />
+							<p>© 2025 Disclaimer: This guide is for educational purposes only. Cryptocurrency investments carry risks. Always do your own research before investing.</p>
+                        
                         </section>
                     </div>
                 </div>
@@ -364,6 +607,52 @@
             }).catch(err => {
                 alert("Error sending message ❌");
                 console.error(err);
+            });
+        });
+        
+        // Animate progress bars on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('sovereignty-progress').style.width = '95%';
+                document.getElementById('inflation-progress').style.width = '90%';
+                document.getElementById('devaluation-progress').style.width = '85%';
+                document.getElementById('printing-progress').style.width = '80%';
+                document.getElementById('ai-progress').style.width = '75%';
+                document.getElementById('privacy-progress').style.width = '70%';
+                document.getElementById('freedom-progress').style.width = '65%';
+            }, 500);
+            
+            // Animate stat numbers
+            function animateValue(id, start, end, duration) {
+                let obj = document.getElementById(id);
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    obj.innerHTML = Math.floor(progress * (end - start) + start);
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+            
+            setTimeout(function() {
+                animateValue("stat1", 0, 96, 2000);
+                animateValue("stat2", 0, 27, 2000);
+            }, 1000);
+            
+            // Add hover effects to table rows
+            const tableRows = document.querySelectorAll('.table-row');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.01)';
+                    this.style.backgroundColor = '#f8f9fa';
+                });
+                row.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.style.backgroundColor = '';
+                });
             });
         });
     </script>
