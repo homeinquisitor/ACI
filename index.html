@@ -4,8 +4,14 @@
     <title>ACI – Asset Construction Investors | Interlocking CEB Blocks</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600"></noscript>
+    <link rel="preload" as="image" href="images/bg.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 </head>
 <body class="is-preload">
 
@@ -15,7 +21,7 @@
         <!-- Header -->
         <header id="header">
             <div class="lgo">
-                <img src="images/aci.png" alt="ACI Logo">
+                <img src="images/aci.png" alt="ACI Logo" decoding="async" fetchpriority="high">
                 <nav>
                     <ul class="hero-list">
                         <li><a href="#intro">Intro</a></li>
@@ -45,19 +51,19 @@
                 <div class="gallery-slider" id="introSlider">
                     <div class="gallery-track">
                         <div class="gallery-slide">
-                            <img src="images/intro1.jpeg" alt="Beautiful finished earth-block home in Bamenda" />
+                            <img src="images/intro1.jpeg" alt="Beautiful finished earth-block home in Bamenda" / decoding="async">
                         </div>
                         <div class="gallery-slide">
-                            <img src="images/intro2.jpeg" alt="Interlocking earth blocks during construction" />
+                            <img src="images/intro2.jpeg" alt="Interlocking earth blocks during construction" / decoding="async">
                         </div>
                         <div class="gallery-slide">
-                            <img src="images/intro3.jpeg" alt="Finished ACI home exterior" />
+                            <img src="images/intro3.jpeg" alt="Finished ACI home exterior" / decoding="async" loading="lazy">
                         </div>
                         <div class="gallery-slide">
-                            <img src="images/intro4.jpeg" alt="Earth block wall detail" />
+                            <img src="images/intro4.jpeg" alt="Earth block wall detail" / decoding="async" loading="lazy">
                         </div>
 						<div class="gallery-slide">
-                            <img src="images/intro5.jpeg" alt="Earth block wall detail" />
+                            <img src="images/intro5.jpeg" alt="Earth block wall detail" / decoding="async" loading="lazy">
                         </div>
                     </div>
 
@@ -81,28 +87,28 @@
 		        <div class="gallery-slider" id="differenceSlider">
                    <div class="gallery-track">
                      <div class="gallery-slide">
-                       <img src="images/difference.jpeg" alt="Interlocking compressed earth blocks – strength and precision" />
+                       <img src="images/difference.jpeg" alt="Interlocking compressed earth blocks – strength and precision" / decoding="async" loading="lazy">
                      </div>
                      <div class="gallery-slide">
-                       <img src="images/difference2.jpeg" alt="Close-up of an interlocking block edge" />
+                       <img src="images/difference2.jpeg" alt="Close-up of an interlocking block edge" / decoding="async" loading="lazy">
                      </div>
                      <div class="gallery-slide">
-                       <img src="images/difference3.jpeg" alt="Earth block wall under construction" />
+                       <img src="images/difference3.jpeg" alt="Earth block wall under construction" / decoding="async" loading="lazy">
                      </div>
                      <div class="gallery-slide">
-                       <img src="images/difference4.jpeg" alt="Finished natural earth-block wall" />
+                       <img src="images/difference4.jpeg" alt="Finished natural earth-block wall" / decoding="async" loading="lazy">
                      </div>
 					 <div class="gallery-slide">
-                       <img src="images/difference5.jpeg" alt="Finished natural earth-block wall" />
+                       <img src="images/difference5.jpeg" alt="Finished natural earth-block wall" / decoding="async" loading="lazy">
                      </div>
 					 <div class="gallery-slide">
-                       <img src="images/difference6.jpeg" alt="Earth block wall under construction" />
+                       <img src="images/difference6.jpeg" alt="Earth block wall under construction" / decoding="async" loading="lazy">
                      </div>
                      <div class="gallery-slide">
-                       <img src="images/difference7.jpeg" alt="Finished natural earth-block wall" />
+                       <img src="images/difference7.jpeg" alt="Finished natural earth-block wall" / decoding="async" loading="lazy">
                      </div>
 					 <div class="gallery-slide">
-                       <img src="images/difference8.jpeg" alt="Finished natural earth-block wall" />
+                       <img src="images/difference8.jpeg" alt="Finished natural earth-block wall" / decoding="async" loading="lazy">
                      </div>
                    </div>
 
@@ -155,11 +161,7 @@
             <article id="work">
                 <h2 class="major">From Earth to Home</h2>
                 <div class="image main video-main">
-                    <video
-                        controls
-                        playsinline
-                        preload="metadata"
-                        poster="images/work.jpeg">
+                    <video controls playsinline preload="metadata" poster="images/work.jpeg">
                         <source src="images/work.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
@@ -203,7 +205,7 @@
             <!-- About -->
             <article id="about">
                 <h2 class="major">About ACI</h2>
-                <span class="image main"><img src="images/about.jpg" alt="ACI team and compressed earth block production in Bamenda" /></span>
+                <span class="image main"><img src="images/about.jpg" alt="ACI team and compressed earth block production in Bamenda" / decoding="async" loading="lazy"></span>
                 <p><strong>Asset Construction Investors</strong> is a construction and sustainable housing company that produces and retails interlocking compressed earth blocks, while promoting quality, affordable homes through innovative earth-based construction technology.</p>
                 <p>We are building around a simple idea: <strong>Affordable should not mean cheap-looking.</strong> And sustainable should not mean sacrificing comfort, strength or beauty.</p>
                 <p>Our approach combines: <strong>Local materials + on-site block production + retail access + innovative construction + practical design + affordability</strong> to help ordinary families and communities build quality homes.</p>
@@ -254,7 +256,7 @@
             <!-- Contact -->
             <article id="contact">
                 <h2 class="major">Let's Build Something Better</h2>
-                <span class="image main"><img src="images/contact.jpg" alt="Contact ACI – start your project" /></span>
+                <span class="image main"><img src="images/contact.jpg" alt="Contact ACI – start your project" / decoding="async" loading="lazy"></span>
                 <p><strong>Planning to build?</strong> Whether you already own land, need quality blocks for your project, are looking for an affordable home design, or simply want to understand how interlocking earth blocks work, talk to us. <strong>ACI produces and retails its blocks on site for customers to buy and build with.</strong></p>
 
                 <ul class="contact-details">
@@ -301,11 +303,11 @@
     <div id="bg"></div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 
 </body>
 </html>
