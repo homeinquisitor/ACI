@@ -1,5 +1,3 @@
-This is a complete HTML document for the ACI website, redesigned to clearly communicate their mission of making quality homeownership accessible through sustainable, interlocking compressed earth block construction.
-```html
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -8,7 +6,6 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    
 </head>
 <body class="is-preload">
 
@@ -19,6 +16,15 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
         <header id="header">
             <div class="lgo">
                 <img src="images/aci.png" alt="ACI Logo">
+                <nav>
+                    <ul class="hero-list">
+                        <li><a href="#intro">Intro</a></li>
+                        <li><a href="#difference">Why ACI</a></li>
+                        <li><a href="#work">Process</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="content">
                 <div>
@@ -27,15 +33,6 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
                     <p class="hero-support">Locally produced blocks • Smart construction • Beautiful homes • Built for everyday life</p>
                 </div>
             </div>
-            <nav>
-                <ul class="hero-list">
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#difference">Why ACI</a></li>
-                    <li><a href="#work">Process</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
         </header>
 
         <!-- Main -->
@@ -44,7 +41,33 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
             <!-- Intro -->
             <article id="intro">
                 <h2 class="major">A Better Way to Build</h2>
-                <span class="image main"><img src="images/intro1.jpeg" alt="Beautiful finished earth-block home in Bamenda" /></span>
+
+                <div class="gallery-slider" id="introSlider">
+                    <div class="gallery-track">
+                        <div class="gallery-slide">
+                            <img src="images/intro1.jpeg" alt="Beautiful finished earth-block home in Bamenda" />
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/intro2.jpeg" alt="Interlocking earth blocks during construction" />
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/intro3.jpeg" alt="Finished ACI home exterior" />
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/intro4.jpeg" alt="Earth block wall detail" />
+                        </div>
+						<div class="gallery-slide">
+                            <img src="images/intro5.jpeg" alt="Earth block wall detail" />
+                        </div>
+                    </div>
+
+                    <button class="gallery-nav prev" aria-label="Previous image">&#8249;</button>
+                    <button class="gallery-nav next" aria-label="Next image">&#8250;</button>
+
+                    <!-- Dots are generated automatically by main.js -->
+                    <div class="gallery-dots"></div>
+                </div>
+
                 <p><strong>Good homes shouldn't be out of reach.</strong> For many families, building a home means facing rising material costs, expensive cement, plastering, transportation and lengthy construction processes. At ACI, we believe affordable housing should not mean sacrificing <strong>strength, durability, appearance or dignity.</strong></p>
                 <p>That's why we're developing a smarter way to build — <strong>interlocking compressed earth blocks.</strong> Made using locally available earth and engineered for construction, our blocks reduce unnecessary steps while creating homes with a distinctive natural brick appearance. Cameroon's housing challenge is significant, and local building materials are a key part of the solution.</p>
                 <p><strong>Our vision:</strong> A future where a hardworking family can buy quality, locally produced blocks and build a beautiful, durable home without spending a lifetime trying to afford it.</p>
@@ -55,9 +78,46 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
             <!-- Difference / Why ACI -->
             <article id="difference">
                 <h2 class="major">Why Interlocking Earth Blocks?</h2>
-                <span class="image main"><img src="images/difference.jpeg" alt="Interlocking compressed earth blocks – strength and precision" /></span>
-                <p><strong>STRONGER CONSTRUCTION. SMARTER BUILDING. NATURAL BEAUTY.</strong> ACI produces and retails interlocking compressed earth blocks for people who want to build durable, practical and beautiful homes. Our blocks reduce unnecessary construction steps while making greater use of locally available materials.</p>
+		        <div class="gallery-slider" id="differenceSlider">
+                   <div class="gallery-track">
+                     <div class="gallery-slide">
+                       <img src="images/difference.jpeg" alt="Interlocking compressed earth blocks – strength and precision" />
+                     </div>
+                     <div class="gallery-slide">
+                       <img src="images/difference2.jpeg" alt="Close-up of an interlocking block edge" />
+                     </div>
+                     <div class="gallery-slide">
+                       <img src="images/difference3.jpeg" alt="Earth block wall under construction" />
+                     </div>
+                     <div class="gallery-slide">
+                       <img src="images/difference4.jpeg" alt="Finished natural earth-block wall" />
+                     </div>
+					 <div class="gallery-slide">
+                       <img src="images/difference5.jpeg" alt="Finished natural earth-block wall" />
+                     </div>
+					 <div class="gallery-slide">
+                       <img src="images/difference6.jpeg" alt="Earth block wall under construction" />
+                     </div>
+                     <div class="gallery-slide">
+                       <img src="images/difference7.jpeg" alt="Finished natural earth-block wall" />
+                     </div>
+					 <div class="gallery-slide">
+                       <img src="images/difference8.jpeg" alt="Finished natural earth-block wall" />
+                     </div>
+                   </div>
+
+                 <button class="gallery-nav prev" aria-label="Previous image">
+                     <i class="fas fa-chevron-left"></i>
+                 </button>
+                 <button class="gallery-nav next" aria-label="Next image">
+                     <i class="fas fa-chevron-right"></i>
+                 </button>
+
+                 <div class="gallery-dots"></div>
+                </div>
                 
+                <p><strong>STRONGER CONSTRUCTION. SMARTER BUILDING. NATURAL BEAUTY.</strong> ACI produces and retails interlocking compressed earth blocks for people who want to build durable, practical and beautiful homes. Our blocks reduce unnecessary construction steps while making greater use of locally available materials.</p>
+
                 <div class="pillar-grid">
                     <div class="pillar-item">
                         <h4>🧱 Smarter Construction</h4>
@@ -88,23 +148,22 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
                 <h3>Less Mortar. Less Plaster. Less Waste.</h3>
                 <p>Our interlocking block system is designed to reduce the need for conventional mortar between block courses and can allow selected walls to remain exposed without conventional plastering, depending on the design, block specification and finishing requirements.</p>
                 <p><em>Technically sound. Visually stunning.</em></p>
-				<p><a href="#intro" class="button primary">A Better Way to Build</a> <a href="#work" class="button">How it works</a></p>
-                
+                <p><a href="#intro" class="button primary">A Better Way to Build</a> <a href="#work" class="button">How it works</a></p>
             </article>
 
             <!-- Work / Process -->
             <article id="work">
                 <h2 class="major">From Earth to Home</h2>
                 <div class="image main video-main">
-    <video
-        controls
-        playsinline
-        preload="metadata"
-        poster="images/work.jpeg">
-        <source src="images/work.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-    </video>
-</div>
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata"
+                        poster="images/work.jpeg">
+                        <source src="images/work.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <p>Our projects showcase the power of interlocking CEB. ACI produces the blocks on site and makes them available for purchase by families, builders and contractors. Customers can buy the blocks and use them for their own construction projects, while our construction work demonstrates how the system can be used to create beautiful, durable homes.</p>
 
                 <div class="step-grid">
@@ -133,19 +192,18 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
                         <h4>Move In</h4>
                         <p>A beautiful, functional home designed around what families actually need.</p>
                     </div>
-					
                 </div>
 
                 <p><strong>EARTH → BLOCK → CUSTOMER → WALL → HOUSE → FAMILY</strong></p>
                 <p><strong>A design ready to be lived in:</strong> The blocks themselves provide a modern burned‑brick aesthetic, with clean lines and a warm, natural texture. You don't need cement plastering to make them look good — they are ready for you to move in as soon as the roof goes on. Ideal for those on a budget: skip the extra cost of plastering, painting, or cladding, and enjoy a stylish, durable finish straight from the press.</p>
                 <p>We've completed several pilot projects in the North West Region – each one stands as proof that sustainable construction can be affordable and superior.</p>
-				<p><a href="#contact" class="button primary">Contact Us today</a> </p>
+                <p><a href="#contact" class="button primary">Contact Us today</a></p>
             </article>
 
             <!-- About -->
             <article id="about">
                 <h2 class="major">About ACI</h2>
-                <span class="image main"><img src="images/about.jpeg" alt="ACI team and compressed earth block production in Bamenda" /></span>
+                <span class="image main"><img src="images/about.jpg" alt="ACI team and compressed earth block production in Bamenda" /></span>
                 <p><strong>Asset Construction Investors</strong> is a construction and sustainable housing company that produces and retails interlocking compressed earth blocks, while promoting quality, affordable homes through innovative earth-based construction technology.</p>
                 <p>We are building around a simple idea: <strong>Affordable should not mean cheap-looking.</strong> And sustainable should not mean sacrificing comfort, strength or beauty.</p>
                 <p>Our approach combines: <strong>Local materials + on-site block production + retail access + innovative construction + practical design + affordability</strong> to help ordinary families and communities build quality homes.</p>
@@ -196,7 +254,7 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
             <!-- Contact -->
             <article id="contact">
                 <h2 class="major">Let's Build Something Better</h2>
-                <span class="image main"><img src="images/contact.jpeg" alt="Contact ACI – start your project" /></span>
+                <span class="image main"><img src="images/contact.jpg" alt="Contact ACI – start your project" /></span>
                 <p><strong>Planning to build?</strong> Whether you already own land, need quality blocks for your project, are looking for an affordable home design, or simply want to understand how interlocking earth blocks work, talk to us. <strong>ACI produces and retails its blocks on site for customers to buy and build with.</strong></p>
 
                 <ul class="contact-details">
@@ -248,8 +306,7 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
                 </form>
                 <ul class="icons">
                     <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="https://wa.me/+237682069914" target="" class="icon brands fa-whatsapp"><span class="label" >WhatsApp</span></a></li>
-
+                    <li><a href="https://wa.me/+237682069914" target="_blank" rel="noopener" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
                     <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
                 </ul>
             </article>
@@ -260,11 +317,11 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
         <footer id="footer">
             <div class="footer-extended">
                 <p class="footer-tagline">Building Sustainable. Building Affordable. Building for Tomorrow.</p>
-                
+
                 <p>Bamenda, Cameroon</p>
                 <p>
-                    <a href="#" style="color:#aaa; margin:0 0.5rem;">Facebook</a> | 
-                    <a href="https://wa.me/+237682069914" target="blank" style="color:#aaa; margin:0 0.5rem;">WhatsApp</a>
+                    <a href="#" style="color:#aaa; margin:0 0.5rem;">Facebook</a> |
+                    <a href="https://wa.me/+237682069914" target="_blank" rel="noopener" style="color:#aaa; margin:0 0.5rem;">WhatsApp</a> |
                     <a href="#" style="color:#aaa; margin:0 0.5rem;">Instagram</a>
                 </p>
                 <p class="copyright" style="font-size:0.75rem; color:#777;">&copy; ACI – Asset Construction Investors. Bamenda, Cameroon. Design: <a href="https://html5up.net" style="color:#777;">HTML5 UP</a>.</p>
@@ -285,4 +342,3 @@ This is a complete HTML document for the ACI website, redesigned to clearly comm
 
 </body>
 </html>
-```
