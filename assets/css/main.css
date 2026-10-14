@@ -1404,5 +1404,4 @@ body.is-preload #footer {
 /* Remove the content's top/bottom border lines */
 #header .content {
 	background: rgba(0, 0, 0, 0.2);
-	backdrop-filter: blur(4px);
-	-webkit
+	backdrop-filter: blur
