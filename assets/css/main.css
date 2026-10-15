@@ -668,7 +668,7 @@ body.is-preload #bg:before {
 #header > * {
 	transition: opacity 0.325s ease-in-out;
 	position: relative;
-	margin-top: 3.5rem;
+	margin-top: 1rem;
 }
 
 /* REMOVED: vertical connector lines above each header child */
@@ -700,6 +700,7 @@ body.is-preload #bg:before {
 #header .content {
 	border: none !important;
 	max-width: 100%;
+	
 }
 
 #header .content .inner {
@@ -957,7 +958,7 @@ body.is-preload #header .content .inner {
 	transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 	width: 100%;
 	max-width: 100%;
-	margin-top: 2rem;
+	margin-top: 0rem;
 	text-align: center;
 }
 
@@ -1405,108 +1406,3 @@ body.is-preload #footer {
 #header .content {
 	background: rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur
-	
-	/* ==========================================================================
-   MOBILE FRIENDLY ADDITIONS
-   ========================================================================== */
-
-/* Constrain logo image so it never overflows on small screens */
-#header .lgo img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-	margin: 0 auto;
-}
-
-@media screen and (max-width: 736px) {
-	/* Stack nav vertically to prevent horizontal overflow */
-	#header nav ul {
-		flex-direction: column;
-		min-width: auto;
-		width: 100%;
-		max-width: 20rem;
-		margin: 0 auto;
-	}
-
-	#header nav ul li a {
-		min-width: 0;
-		width: 100%;
-		height: 2.75rem;
-		line-height: 2.75rem;
-		padding: 0 1rem;
-		text-align: center;
-	}
-
-	/* Reduce oversized hero text */
-	.hero-headline {
-		font-size: 1.6rem;
-		letter-spacing: 0.2rem;
-	}
-
-	.hero-sub {
-		font-size: 1.5rem;
-	}
-
-	/* Stack contact buttons vertically */
-	.contact-buttons {
-		flex-direction: column;
-		align-items: center;
-		gap: 0.75rem;
-	}
-
-	.contact-buttons .button {
-		width: 100%;
-		max-width: 20rem;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	/* Further reduce hero text for small phones */
-	.hero-headline {
-		font-size: 1.4rem;
-		letter-spacing: 0.15rem;
-	}
-
-	.hero-sub {
-		font-size: 1.2rem;
-	}
-
-	/* Reduce article padding further */
-	#main article {
-		padding: 3rem 1rem 0.5rem 1rem;
-	}
-
-	/* Reduce header padding */
-	#header {
-		padding: 1rem 0.75rem 0.75rem;
-	}
-
-	/* Ensure gallery fits */
-	.gallery-slider {
-		aspect-ratio: 4 / 3;
-	}
-
-	/* Reduce footer spacing */
-	#footer {
-		margin-top: 1rem;
-	}
-
-	/* Make pillar and value items more compact */
-	.pillar-item {
-		padding: 1rem;
-	}
-
-	.value-item {
-		padding: 0.6rem 0.8rem;
-	}
-
-	/* Contact buttons full width */
-	.contact-buttons .button {
-		max-width: 100%;
-	}
-
-	/* Reduce brand sentence size */
-	.brand-sentence {
-		font-size: 1rem;
-	}
-}
